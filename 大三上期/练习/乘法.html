@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <button onclick="myFunction()">按钮</button>
+    <script>
+       
+        function myFunction()
+        {
+            var number1 = parseFloat(prompt("输入数字"));
+            var number1F= prompt("输入符号");
+            var number2 = parseFloat(prompt("输入数字"));
+            var sum;
+            switch(number1F)
+            {
+                case "+":sum = number1+number2;break;
+                case "-":sum = number1-number2;break;
+                case "*":sum = number1*number2;break;
+                case "/":sum = number1/number2;break;
+            }
+            document.write(sum)
+        }
+    </script>
+</body>
+</html>
