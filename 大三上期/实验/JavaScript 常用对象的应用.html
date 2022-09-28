@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //209001019 王青龙
+    //1.
+    console.log(Number(true), Number(null), +undefined);
+    console.log(Boolean('100'), Boolean(100), Boolean(null), !!undefined);
+    console.log(parseInt(123.6), parseInt(0b1011011), parseInt(0x2A), parseInt(0x2A, 8));
+    console.log(parseFloat('123.6'), parseFloat('100px'), parseFloat(010));
+    console.log(eval('87*99+2'));
+    console.log(isNaN(null), isNaN('abc'), isNaN("a1b2c3"));
+    //2.1
+    var arr1 = [];
+    console.log(arr1, arr1.length);
+    var arr2 = [1, 2, 3];
+    console.log(arr2[0], arr2.length);
+    var arr3 = new Array();
+    console.log(arr3[1], arr3.length);
+    //2.2
+    arr2.shift()
+    console.log(arr2, arr2.length);
+    //3
+    var d = new Date();
+    hour = d.getHours();
+    Minute = d.getMinutes();
+    console.log(`${hour}:${Minute}`);
+    //4.1
+    var reg1 = /^\s{4}$/;
+    console.log(
+      reg1.test('1234'),
+      reg1.test('1a34'),
+      reg1.test('12345'))
+    //4.2
+    var reg2 = new RegExp("/^[sp]\\d{1,4}$", "i");
+    console.log(
+      reg2.test('p123'),
+      reg2.test('1234'),
+      reg2.test('S10'))
+    //4.3
+    var pattern = "19122644826";
+    var phone = /^1{1}(33|53|73|77|80|81|89|90|91|93|99){1}\d{4}\d{4}$/
+    console.log(phone.test(pattern))
+    //5.
+    var string = "1544564502@qq.com";
+    var haoma = string.substr(0, 10);
+    console.log(haoma);
+    //6.
+    var number = Math.ceil(Math.random(1, 3));
+    console.log(number);
+    //7.
+    var x = 1;
+    function A (y) {
+      var x = 2;
+      function B (z) {
+        console.log(x + y + z);
+      }
+      return B;
+    }
+    var C = A(2);
+    C(3);
+  </script>
+</body>
+
+</html>

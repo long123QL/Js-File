@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //209001019 王青龙
+    // 1
+    function getSum (num1, num2) {
+      var sum = num1 + num2;
+      console.log(num1 + "+" + num2 + "=" + (num1 + num2));
+    }
+    getSum(2, 3);
+
+    // 2
+    var getProduct = function (num1, num2) {
+      console.log(num1 + "*" + num2 + "=" + (num1 * num2));
+    }
+    getProduct(2, 4);
+    // 由于这个是变量定义式，函数不会预加载因而如果把调用写在前面调不到函数
+
+    // 3
+    var a = 100;
+    function test () {
+      console.log(a);
+      a = 10;
+      console.log(a);
+    }
+    test();
+    console.log(a);
+
+    // 4
+    var a = 10;
+    fun1();
+    function fun1 () {
+      var b = 20;
+      console.log(a);
+      console.log(b);
+      var a = 30;
+    }
+
+    //5
+    function fun2 (a, b) {
+      console.log(arguments[0]);
+      console.log(arguments[1]);
+      console.log(arguments[2]);
+    }
+    fun2(1, 2, 3);
+
+    //6
+    function fun2 (a, b) {
+      for (var txt in arguments) {
+        console.log(arguments[txt]);
+      }
+    }
+    fun2(1, 2, 3);
+
+  </script>
+  <script>
+    // "use strict";
+    // num=100;
+    // function x(p1, p2) {};
+    // delete x;    //不允许删除函数
+    // function x(p1, p1) {};//不允许变量重名  
+    //9
+    try {
+      var x = 10;
+      y = 20;
+    }
+    catch
+    {
+      var x = 10;
+      var y = 20;
+    }
+    finally {
+      console.log(x + y);
+    }
+  </script>
+</body>
+
+</html>

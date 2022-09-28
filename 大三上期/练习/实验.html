@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function changef () {
+      var _css = document.getElementById('css');
+      if (_css.href.indexOf("huanfu.css") != -1)
+        _css.href = _css.href.replace("huanfu.css", "otherhu.css");
+      else
+        _css.href = _css.href.replace("otherhu.css", "huanfu.css");
+    }
+  </script>
+  <input id="btnChangeSkin" type="button" value="换肤" onclick="changef()" />
+</head>
+
+<body>
+
+</body>
+
+</html>
